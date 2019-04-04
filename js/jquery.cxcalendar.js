@@ -100,6 +100,9 @@
         hide: function() {
           self.hide();
         },
+        destroy: function() {
+          self.destroy();
+        },
         getDate: function() {
           return self.getDate.apply(self, arguments);
         },
@@ -688,6 +691,12 @@
       self.dom.blockBg.hide();
       self.dom.dateSet.hide();
       self.dom.dateTxt.show();
+    };
+
+    // 销毁日期选择器
+    calendar.destroy = function() {
+      var self = this;
+      self.dom.pane.remove();
     };
 
     // 跳转到日期
