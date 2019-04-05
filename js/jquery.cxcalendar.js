@@ -93,6 +93,8 @@
       self.setOptions();
       self.build(true);
 
+      self.dom.el.data('cxcalendar', self);
+
       self.api = {
         show: function() {
           self.show();
