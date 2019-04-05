@@ -699,6 +699,7 @@
     calendar.destroy = function() {
       var self = this;
       self.dom.pane.remove();
+      self.dom.blockBg.remove();
     };
 
     // 跳转到日期
