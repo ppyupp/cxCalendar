@@ -904,6 +904,9 @@
 
       self.dom.el.val(_theValue).trigger('change');
 
+      // 兼容vue的v-model双向绑定
+      self.dom.el[0].dispatchEvent(new Event('input'));
+
       self.hide();
       self.gotoDate(_theYear, _theMonth);
     };
